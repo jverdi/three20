@@ -16,10 +16,10 @@
 
 #import "Three20UINavigator/TTURLNavigatorPattern.h"
 
-// UINavigator (private)
-#import "Three20UINavigator/private/TTURLPatternInternal.h"
-#import "Three20UINavigator/private/TTURLWildcard.h"
-#import "Three20UINavigator/private/TTURLArguments.h"
+// UINavigator
+#import "Three20UINavigator/TTURLPatternInternal.h"
+#import "Three20UINavigator/TTURLWildcard.h"
+#import "Three20UINavigator/TTURLArguments.h"
 
 // Core
 #import "Three20Core/TTCorePreprocessorMacros.h"
@@ -487,7 +487,7 @@ static NSString* kUniversalURLPattern = @"*";
       returnValue = [self invoke:target withURL:URL query:query];
 
     } else {
-      TTDWARNING(@"No object created from URL:'%@' URL");
+      TTDWARNING(@"No object created from URL:'%@'", URL);
     }
     [target release];
   }
